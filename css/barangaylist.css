@@ -1,0 +1,211 @@
+/* === barangaylist.css === */
+
+.profession {
+    font-size: 14px;
+    /* Your size */
+    display: block;
+    color: gray;
+}
+
+/* body {
+    width: 100%;
+    border-collapse: collapse;
+} */
+/* Generally not applied to body */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    padding: 1rem;
+    left: 4%;
+    width: 92%;
+    background-color: white;
+}
+
+.table-wrapper {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.table-container {
+    width: 100%;
+    /* Takes full width of .table-wrapper */
+    overflow-x: auto;
+    /* IMPORTANT: Allows horizontal scrolling if table content is wider */
+}
+
+table.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-table th,
+.content-table td {
+    color: black;
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+    /* This will cause table to be wide if content is long. Requires overflow-x: auto on parent. */
+}
+
+
+.content-table td.member-td {
+    text-align: start;
+}
+
+.content-table th {
+    background-color: #f8f9fa;
+    color: #695CFE;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-bottom-width: 2px;
+    border-color: #dee2e6;
+}
+
+
+.content-table th:last-child,
+/* For the arrow column header */
+.content-table td:last-child {
+    /* For the arrow column cell */
+    text-align: center;
+    width: 60px;
+    /* Suggested width for a cleaner look for the arrow column */
+}
+
+.content-table tbody tr:hover {
+    background-color: #f1f5f9;
+    /* Your hover color */
+}
+
+/* --- Styles for Row Clickability and Expansion --- */
+
+.expandable-row {
+    cursor: pointer;
+    /* Indicates the entire row is clickable */
+}
+
+.expandable-row:hover {
+    /* Ensure hover on the whole row is consistent */
+    background-color: #f1f5f9 !important;
+    /* Use !important if needed to override */
+}
+
+.active-row {
+    /* When a row is expanded */
+    background-color: #e0e9f5 !important;
+    /* A distinct color for active row, adjust if needed */
+    /* Your 'lightgray !important;' is also an option */
+}
+
+.expand-arrow {
+    cursor: pointer;
+    /* Still good for visual cue on arrow itself */
+    font-size: 18px;
+    /* Your font size */
+    display: inline-block;
+    transition: transform 0.3s ease;
+    /* Your transition */
+    color: #1d3557;
+    /* Your arrow color */
+}
+
+
+.expanded-data td.expand-content {
+    /* The TD element holding the expanded content */
+    padding: 0;
+    /* Remove padding from TD to allow inner content to control it */
+    background-color: #f7faff;
+    /* Light background for the expanded area, slightly different from your #f1f8ff or #e8f0fe */
+    border-top: 1px solid #ddd;
+    /* Refined border */
+    border-bottom: 1px solid #ddd;
+    /* Added for consistency */
+}
+
+.expand-content {
+    /* The div or actual content wrapper inside td.expand-content */
+    padding: 15px;
+    /* Your padding for the content itself */
+    /* background-color: #e8f0fe; */
+    /* Your original bg for this div. Now td.expand-content has a bg. */
+}
+
+/* Inner table for household details */
+.expand-content table.inner-details-table {
+    /* Added class for specificity */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expand-content table.inner-details-table th,
+.expand-content table.inner-details-table td {
+    border-bottom: 1px solid #e0e0e0;
+    /* Slightly refined border */
+    text-align: left;
+    background: transparent;
+    /* Let parent background show through or be white */
+    font-size: 14px;
+    /* Keeping consistent with main table data cells */
+    padding: 10px 12px;
+    /* Adjusted padding for inner table */
+}
+
+.expand-content table.inner-details-table th {
+    color: #0056b3;
+    /* Refined text color for inner header */
+    background-color: #e9f3ff;
+    /* Light blueish background for inner header */
+    font-weight: 600;
+    /* Your font-weight: 800 is very bold, 600 is common */
+    text-transform: uppercase;
+    font-size: 13px;
+    /* Slightly smaller for inner table header */
+    letter-spacing: 0.5px;
+    /* Your letter spacing */
+}
+
+/* If the inner table uses a <thead> explicitly */
+.expand-content table.inner-details-table thead th {
+    /* Styles here will specifically target TH within THEAD of inner table */
+    /* This can be same as above or more specific if needed */
+    color: #0056b3;
+    background-color: #e9f3ff;
+}
+
+.expand-content table.inner-details-table tr:hover td {
+    background-color: #e6f0fA !important;
+    /* Hover for inner table cells */
+}
+
+.expand-content table.inner-details-table tr:last-child td {
+    border-bottom: none;
+    /* No border for the very last row's cells in inner table */
+}
+
+/* Style for "No data found" or error messages within .expand-content */
+.expand-content p {
+    font-style: italic;
+    color: #6c757d;
+    text-align: center;
+    padding: 10px;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+/* Optional: transition (your existing rule) */
+/* .expanded-data {
+    transition: all 0.3s ease-in-out;
+} */

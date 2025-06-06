@@ -1,0 +1,221 @@
+/* ============================== */
+/* MODAL STYLES          */
+/* ============================== */
+
+/* The Modal Background (Overlay) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top (Bootstrap default is 1050) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Enable scroll for modal */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in animation */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 25px 30px; /* More padding */
+    border: 1px solid #ddd;
+    width: 85%; /* Responsive width */
+    max-width: 900px; /* Default Max width */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -webkit-animation-name: slideIn; /* Slide down animation */
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+  }
+  /* Optional Wider Modal */
+  .modal-content.wide {
+      max-width: 1150px; /* Adjust if needed */
+  }
+  
+  /* Close Button ('x') */
+  .modal-close {
+    color: #777;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Modal Header */
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.5em; /* Adjust as needed */
+    color: #333; /* Match theme */
+  }
+  
+  /* Uniform Form Styling inside Modal */
+  .modal-content hr {
+      border: 0; height: 1px; background-color: #eee; margin: 20px 0;
+  }
+  
+  .modal-content .form-section {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+  }
+  .modal-content .form-section:last-child {
+       margin-bottom: 15px; /* Less margin for last section */
+  }
+  
+  .modal-content .form-section h2,
+  .modal-content .form-section h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      color: #444;
+      font-size: 1.2em;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+  }
+  .modal-content .form-section h3 {
+       font-size: 1.1em;
+       border-bottom-style: dashed;
+       border-color: #ddd;
+       display: flex; /* Allow aligning span next to it */
+       align-items: baseline;
+  }
+  .modal-content .member-relationship {
+      font-size: 0.9em;
+      font-weight: normal;
+      color: #666;
+      margin-left: 8px;
+  }
+  
+  
+  .modal-content .household,
+  .modal-content .form-row {
+      display: grid;
+      /* Adjust column count and min width as needed */
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px; /* Spacing */
+      margin-bottom: 15px;
+  }
+  /* Adjust household section for potentially fewer columns */
+  .modal-content .household {
+       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  
+  .modal-content .form-group,
+  .modal-content .form-group-1 {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .modal-content label {
+      margin-bottom: 6px;
+      font-weight: 600; /* Slightly bolder */
+      font-size: 0.9em;
+      color: #555;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="date"],
+  .modal-content select {
+      padding: 9px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95em; /* Slightly smaller font */
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  .modal-content input:focus,
+  .modal-content select:focus {
+      border-color: #007bff; /* Example focus color */
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Example focus shadow */
+  }
+  
+  .modal-content input[readonly],
+  .modal-content select[disabled] {
+      background-color: #e9ecef; /* Bootstrap disabled color */
+      cursor: not-allowed;
+      opacity: 0.8;
+  }
+  
+  /* Buttons inside modal */
+  .modal-content .btn,
+  .modal-content .btn-add,
+  .modal-content .btn-submit,
+  .modal-content .btn-cancel,
+  .modal-content .btn-remove-member {
+      /* Inherit from editHousehold.php button styles if defined there */
+      /* Or define specific styles */
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.95em;
+      margin: 5px;
+      border: none;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+  .modal-content .btn-submit { background-color: #198754; color: white; } /* Green */
+  .modal-content .btn-submit:hover { background-color: #157347; }
+  .modal-content .btn-cancel,
+  .modal-content .modal-close-button { background-color: #6c757d; color: white; } /* Grey */
+  .modal-content .btn-cancel:hover,
+  .modal-content .modal-close-button:hover { background-color: #5a6268; }
+  .modal-content .btn-remove-member { background-color: #dc3545; color: white; font-size: 0.8em; padding: 5px 8px;} /* Red */
+  .modal-content .btn-remove-member:hover { background-color: #bb2d3b; }
+  .modal-content .btn-add { background-color: #0d6efd; color: white; } /* Blue */
+  .modal-content .btn-add:hover { background-color: #0b5ed7; }
+  
+  /* Container for remove button alignment */
+  .remove-btn-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      min-height: 38px; /* Match input height approx */
+  }
+  
+  /* Modal Footer Area for Buttons */
+  .modal-footer { /* Optional: Add a specific footer area if needed */
+      text-align: right;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes slideIn {
+    from {top: -100px; opacity: 0}
+    to {top: 0; opacity: 1} /* Adjust 'top:0' if using margin-top:5% */
+  }
+  
+  @keyframes slideIn {
+    from {top: -100px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+  }

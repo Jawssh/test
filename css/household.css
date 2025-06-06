@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.category-continer {
+    width: 95%;
+    margin: 15px 0px 15px 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    padding: 1rem;
+    margin-left: 50px;
+    width: 95%;
+    background-color: white;
+}
+
+.content-container {
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-title-contianer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.info-title-contianer h4 {
+    color: #695CFE;
+}
+
+
+.back-btn {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 80px;
+    z-index: 100;
+    border-radius: 20px;
+    margin: 10px 0px 10px 20px;
+}
+
+.btn-back {
+    border: 1px solid #695CFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 60px;
+    padding: 8px 16px;
+    background-color: #695cfe3f;
+    color: #00000091;
+    text-decoration: none;
+    border-radius: 123%;
+    font-weight: bold;
+    font-size: 50px;
+    transition: .3s;
+}
+
+.btn-back:hover {
+    background: #695CFE;
+    color: white;
+
+}
+
+/* .btn-back:hover {
+    background-color: #2980b9;
+} */
+
+.container1 {
+    gap: 10px;
+    /* Increased gap */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* Distribute space */
+    align-items: stretch;
+    /* Equal height cards */
+    width: 95%;
+
+    margin-left: 50px;
+}
+
+.card1 {
+    /* Renamed from badge1 for clarity, applies to all 4 cards */
+    flex: 1;
+    /* Allow cards to share space */
+    min-width: 200px;
+    /* Minimum width before wrapping if flex-wrap is used */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    /* White background for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    text-align: left;
+    /* Align text to left within card */
+    color: #333;
+    /* Default text color for card content */
+}
+
+.card1 h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    /* Consistent font size for card titles */
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    /* Icon to the right */
+    align-items: center;
+}
+
+
+.card1 h3 i {
+    font-size: 24px;
+    /* Icon size */
+    color: #695CFE;
+    /* Example color, can be specific per card */
+}
+
+
+
+.container1 h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #695CFE;
+}
+
+/* Specific icon colors if needed */
+.card1:nth-child(1) h3 i {
+    color: rgba(113, 219, 219, .9);
+}
+
+.card1:nth-child(2) h3 i {
+    color: rgba(54, 162, 235, .9);
+}
+
+.card1:nth-child(3) h3 i {
+    color: rgba(255, 206, 86, 1);
+}
+
+
+.text {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* padding-left: 130px; */
+    font-size: 30px;
+    /* font-weight: 500; */
+    color: var(--text-color);
+    padding-top: 15px;
+}
+
+.text h3 {
+    color: black;
+}
+
+.title-container {
+    padding-top: 20px;
+}
+
+
+.profession {
+    font-size: 14px;
+    /* Your size */
+    display: block;
+    color: gray;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #064635;
+    padding-bottom: 5px;
+}
+
+.table-container {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+
+    width: 100%;
+    /* Horizontal scroll on small screens */
+}
+
+.content-table {
+    border-radius: 100%;
+}
+
+.content-table table {
+
+    /* Added class */
+    width: 100%;
+    border-collapse: collapse;
+    /* border-top: solid #155; */
+    /* Removed, using wrapper border */
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+    /* Adjust padding */
+    text-align: left;
+    /* LEFT ALIGN TEXT */
+    /* border-bottom: 1px solid #eee; */
+    font-size: 17px;
+    /* Slightly smaller font */
+    vertical-align: middle;
+    white-space: nowrap;
+    /* Prevent wrapping, use horizontal scroll */
+}
+
+.content-table th {
+    background-color: #f8f9fa;
+    /* Light grey header */
+    color: #695CFE;
+    /* Darker grey text */
+    font-weight: 600;
+    /* Less heavy font */
+    font-size: 17px;
+    /* Smaller header font */
+    letter-spacing: 0.5px;
+    border-bottom: 1px gray solid !important;
+}
+
+/* Center align specific columns if needed */
+.content-table th:nth-child(4),
+/* Members */
+.content-table td:nth-child(4) {
+    text-align: center;
+}
+
+.content-table th:nth-child(5),
+/* SES Score */
+.content-table td:nth-child(5) {
+    text-align: right;
+    /* Right align score */
+    padding-right: 20px;
+}
+
+.content-table th:last-child,
+/* Actions */
+.content-table td:last-child {
+    text-align: center;
+}
+
+
+.content-table tbody tr:hover {
+    background-color: #f1f5f9;
+    /* Lighter blue/grey hover */
+}

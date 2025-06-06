@@ -1,0 +1,295 @@
+/* Ensure spacing from navbar */
+* {
+    border-color: gray;
+}
+
+h2 {
+    color: #333;
+
+}
+
+.profession {
+    font-size: 14px;
+    display: block;
+    color: gray;
+}
+
+.table-wrapper {
+
+    margin-left: 5%;
+    width: 90%;
+    background-color: #ffffff;
+
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Horizontal scroll on small screens */
+}
+
+table.content-table {
+    /* Added class */
+    width: 100%;
+    border-collapse: collapse;
+    /* border-top: solid #155; */
+    /* Removed, using wrapper border */
+}
+
+
+.content-table th,
+.content-table td {
+    border-radius: 8px;
+    padding: 12px 15px;
+    /* Adjust padding */
+    text-align: left;
+    /* LEFT ALIGN TEXT */
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    /* Slightly smaller font */
+    vertical-align: middle;
+    white-space: nowrap;
+    /* Prevent wrapping, use horizontal scroll */
+}
+
+.content-table th {
+    background-color: #f8f9fa;
+    /* Light grey header */
+    color: #495057;
+    /* Darker grey text */
+    font-weight: 600;
+    /* Less heavy font */
+    text-transform: uppercase;
+    font-size: 12px;
+    /* Smaller header font */
+    letter-spacing: 0.5px;
+    border-bottom-width: 2px;
+    /* Thicker bottom border for header */
+    border-color: #dee2e6;
+}
+
+/* Center align specific columns if needed */
+.content-table th:nth-child(4),
+/* Members */
+.content-table td:nth-child(4) {
+    text-align: center;
+}
+
+.content-table th:nth-child(5),
+/* SES Score */
+.content-table td:nth-child(5) {
+    text-align: right;
+    /* Right align score */
+    padding-right: 20px;
+}
+
+.content-table th:last-child,
+/* Actions */
+.content-table td:last-child {
+    text-align: center;
+}
+
+
+.content-table tbody tr:hover {
+    background-color: #f1f5f9;
+    /* Lighter blue/grey hover */
+}
+
+.update-btn,
+.delete-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    margin: 3px;
+    border-radius: 4px;
+    font-size: 14px;
+    border: solid black 1px;
+}
+
+.update-btn {
+    background-color: #695CFE;
+    /* Your theme blue/purple */
+    color: white;
+}
+
+
+.update-btn:hover {
+    background-color: #5a4de0;
+}
+
+
+.delete-btn {
+    background-color: #dc3545;
+    /* Bootstrap red */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #bb2d3b;
+}
+
+
+.create-account-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns to the right */
+    width: 90%;
+    margin-bottom: 20px
+        /* Matches the table width */
+
+        /* Centers within the section */
+}
+
+.create-account-btn {
+    border: none;
+    /* border: solid black 1px; */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.create-account-btn:hover {
+    background-color: rgb(47, 122, 184)
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+.modal-content .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.modal-content label {
+    display: block;
+
+    color: #555;
+}
+
+
+.modal-content img {
+    width: 100px;
+    height: 100px;
+}
+
+.modal-title-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-btn-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Notification Style */
+.notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#registerModal {
+    display: none;
+    /* Hide modal initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#updateModal {
+    display: none;
+    /* Hide modal initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}

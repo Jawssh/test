@@ -1,0 +1,337 @@
+/* Main Content Styles */
+
+
+
+.container {
+    width: 95%;
+    left: 3%;
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+
+
+
+.profession {
+    font-size: 14px;
+    display: block;
+    color: gray;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+/* Household-grid */
+/* Add these styles to your existing addHousehold.css */
+
+/* Household Information Grid Layout */
+
+
+.household {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* Space between input groups */
+}
+
+.form-group-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: #34495e;
+}
+
+.form-group-1 label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group-1 input[type="text"],
+.form-group-1 input[type="date"],
+.form-group-1 input[type="number"],
+.form-group-1 select {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.form-group input[type="date"] {
+    padding: 0.6rem;
+}
+
+/* Adjust form section padding */
+.form-section.household-info {
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .household-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section.household-info {
+        padding: 1rem;
+    }
+}
+
+
+/* Form Sections */
+.form-section {
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #34495e;
+    padding-bottom: 0.5rem;
+}
+
+/* Form Layout */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1rem;
+}
+
+
+
+.form-group label {
+    font-size: 15px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.form-group input[type="date"] {
+    padding: 0.6rem;
+}
+
+#totalBeneficiaries {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: not-allowed;
+}
+
+/* Member Forms */
+.member-form {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    border-top: solid #155724;
+}
+
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.member-header h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.btn-remove {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn-remove:hover {
+    background: #c0392b;
+}
+
+/* Style for disabled selects */
+.disabled-select {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 1;
+    /* Ensure it's visible but not editable */
+}
+
+/* Make it clear the field is locked */
+.disabled-select:focus {
+    outline: none;
+    border-color: #ddd;
+}
+
+/* Buttons */
+.btn-add {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.btn-add:hover {
+    background: #2980b9;
+}
+
+.btn-submit {
+
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+.btn-submit:hover {
+    background: #27ae60;
+}
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* When sidebar is closed */
+.sidebar.close~.home {
+    left: 88px;
+    width: calc(100% - 88px);
+}
+
+@media (max-width: 768px) {
+    .home {
+        left: 88px;
+        width: calc(100% - 88px);
+    }
+
+    .sidebar.close~.home {
+        left: 0;
+        width: 100%;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.inherited-lname {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.btn-remove {
+    display: none;
+    /* Hidden by default for fixed members */
+}
+
+.member-form:nth-child(n+4) .btn-remove {
+    display: block;
+    /* Show for dynamic members */
+}
+
+.add-child-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+/* Style for readonly selects (used instead of disabled) */
+.readonly-select {
+    background-color: #e9ecef;
+    /* Light gray background */
+    color: #495057;
+    /* Standard text color */
+    cursor: not-allowed;
+    /* Indicate not editable */
+    border-color: #ced4da;
+    /* Light gray border */
+}
+
+.readonly-select:focus {
+    outline: none;
+    /* Remove focus outline for a cleaner look */
+    border-color: #ced4da;
+    /* Keep the same border color on focus */
+    box-shadow: none;
+    /* Remove focus box shadow */
+}
+
+.remove-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
